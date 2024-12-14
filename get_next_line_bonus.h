@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 14:36:15 by csavreux          #+#    #+#             */
-/*   Updated: 2024/12/14 02:18:54 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2024/12/14 02:18:10 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
+# endif
+
+# ifndef NB_FD
+#  define NB_FD 1023
+# endif
+
+# if NB_FD < 0 || NB_FD >= 1024
+#  error NB_FD must be >= 0 and < 1024
 # endif
 
 # if BUFFER_SIZE <= 0
